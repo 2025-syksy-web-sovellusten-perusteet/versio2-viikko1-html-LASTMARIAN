@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="fi">
 <head>
@@ -9,21 +8,69 @@
 </head>
 <body>
   <header>
-    <h1><!-- TODO: Lomake-sivun H1 --></h1>
-    <nav aria-label="Päävalikko">
-      <!-- TODO: Sama navigaatio kuin muilla sivuilla -->
-    </nav>
+    <h1>Yhteydenottolomake</h1>
+   <nav aria-label="Päävalikko">
+  <ul>
+    <li><a href="index.html">Etusivu</a></li>
+    <li><a href="table.html">Taulukko</a></li>
+    <li><a href="form.html">Lomake</a></li>
+    <li><a href="image.html">Kuva</a></li>
+  </ul>
+</nav>
+
   </header>
+
   <main>
-    <!-- TODO: Luo <form>:
-         - lisää label for + id parit
-         - järkevät type-arvot (email, number, tms.)
-         - method ja action attribuutit
-         - submit-painike
-    -->
+    <h2>Täytä lomake</h2>
+    <form action="/laheta" method="post">
+      <div>
+        <label for="nimi">Nimi</label>
+        <input
+          type="text"
+          id="nimi"
+          name="nimi"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="sahkoposti">Sähköposti</label>
+        <input
+          type="email"
+          id="sahkoposti"
+          name="sahkoposti"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="ika">Ikä</label>
+        <input
+          type="number"
+          id="ika"
+          name="ika"
+          min="0"
+          max="120"
+        />
+      </div>
+
+      <div>
+        <label for="viesti">Viesti</label>
+        <textarea
+          id="viesti"
+          name="viesti"
+          rows="4"
+        ></textarea>
+      </div>
+
+      <div>
+        <button type="submit">Lähetä</button>
+      </div>
+    </form>
   </main>
+
   <footer>
-    <!-- TODO: Footer -->
+    <p>&copy; 2025 Oma sivusto</p>
   </footer>
 </body>
 </html>
